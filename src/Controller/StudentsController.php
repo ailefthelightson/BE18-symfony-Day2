@@ -14,7 +14,7 @@ class StudentsController extends AbstractController
     public function index(ManagerRegistry $doctrine): Response
     {
         $students = $doctrine->getRepository(Students::class)->findAll();
-        dd($students);
+        // dd($students);
         return $this->render('students/index.html.twig', [
             'students' => $students,
         ]);
